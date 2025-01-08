@@ -2,11 +2,19 @@
 
 @font-face {
   font-family: 'norsebold';
-  src: url('fonts/norse-bold-webfont.woff2') format('woff2'),
-       url('fonts/norse-bold-webfont.woff') format('woff');
+  src: url('../fonts/norse-bold-webfont.woff2') format('woff2'),
+       url('../fonts/norse-bold-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 } 
+
+@font-face {
+  font-family: 'open_sans';
+  src: url('../fonts/opensans-regular-webfont.woff2') format('woff2'),
+       url('../fonts/opensans-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
  
  * {
   margin: 0;
@@ -14,6 +22,10 @@
 
 html, body {
   display: flex;
+}
+
+body {
+  width: 100%;
 }
 
 /* Plant image */
@@ -65,4 +77,30 @@ footer,
 .odin-container > span {
   font-family: "norsebold";
   font-size: 10rem;
+}
+
+/* Main */
+
+main {
+  display: flex;
+  flex-direction: column;
+  font-family: "open_sans"
+}
+
+.paragraphs,
+.temptation {
+  font-size: 4rem;
+  margin: 15vh 0 0 5vh;
+}
+
+.temptation{
+  margin-top: 5vh;
+}
+
+#you {
+  font-weight: 700
+}
+
+#know {
+  font-style: italic;
 }
