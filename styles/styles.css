@@ -15,6 +15,11 @@
   font-weight: normal;
   font-style: normal;
 }
+
+:root {
+  --login-clr: #596D48;
+}
+
  
  * {
   margin: 0;
@@ -32,7 +37,7 @@ body {
 
 .img-container {
   position: relative;
-  width: 30vw;
+  min-width: 30vw;
   height: 100vh;
 } 
 
@@ -56,7 +61,8 @@ footer,
   width: 100%;
   bottom: 10px; 
   color: rgb(255, 255, 255);
-  font-size: 32px;
+  font-size: 1rem;
+  font-family: "open_sans";
   text-align: center;
 }
 
@@ -76,7 +82,7 @@ footer,
 
 .odin-container > span {
   font-family: "norsebold";
-  font-size: 10rem;
+  font-size: 7rem;
 }
 
 /* Main */
@@ -84,13 +90,14 @@ footer,
 main {
   display: flex;
   flex-direction: column;
+  width: 100%;
   font-family: "open_sans"
 }
 
 .paragraphs,
 .temptation {
-  font-size: 4rem;
   margin: 15vh 0 0 5vh;
+  font-size: 2rem;
 }
 
 .temptation{
@@ -104,3 +111,76 @@ main {
 #know {
   font-style: italic;
 }
+
+/* Forms */
+
+form {
+  margin-top: 4vh;
+}
+
+h1 {
+  margin: 2vh 0 2vh 5vh;
+  font-size: 2rem
+}
+
+fieldset {
+  padding: 0px;
+  box-shadow: 0px 3px 8px  black;
+}
+
+fieldset > div {
+  position: relative;
+  margin: 2vh 0 0 5vh;
+  height: 3vh;
+}
+
+fieldset > div:last-child {
+  margin-bottom: 5vh;
+}
+
+label,
+input {
+  font-size: 1rem;
+}
+
+div > input {
+  box-sizing: border-box;
+  width: 10vw;
+  height: 3vh;
+  padding: 5px;
+}
+
+div > input:first-of-type {
+  margin-right: 50px;
+}
+
+label {
+  position: absolute;
+  padding: 2.5px;
+  padding-left: 10px;
+  /* margin: 5vh 0 0 5vh; */
+}
+
+input[type="submit"] {
+  box-sizing: border-box;
+  background-color: var(--login-clr);
+  color: white; 
+  border-radius: 10px;
+  border: 0;
+  margin: 2vh 0 2vh 5vh;
+  font-size: 1.2rem;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+
+.own-acc {
+  margin: 2vh 0 2vh 5vh;
+  font-weight: 600;
+}
+
+#login {
+  cursor: pointer;
+  color: var(--login-clr);
+}
+
+
