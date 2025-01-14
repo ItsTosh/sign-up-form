@@ -11,3 +11,6 @@ Background photo by Halie West on Unsplash
 - https://unsplash.com/@haliewestphoto
 - https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA
 
+The Odin Project for the log
+- https://www.theodinproject.com/dashboard;
+
