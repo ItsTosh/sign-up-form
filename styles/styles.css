@@ -20,7 +20,6 @@
   --login-clr: #596D48;
 }
 
- 
  * {
   margin: 0;
 }
@@ -55,7 +54,7 @@ a:visited {
 
 /* Caption + Footer */
 
-footer,
+.img-container > footer,
 .odin-container {
   position: absolute;
   width: 100%;
@@ -91,6 +90,7 @@ main {
   display: flex;
   flex-direction: column;
   width: 100%;
+  /* height: 100vh; */
   font-family: "open_sans"
 }
 
@@ -134,6 +134,10 @@ fieldset > div {
   height: 3vh;
 }
 
+fieldset > div:nth-of-type(1) ~ div {
+ margin-top: 3vh;
+}
+
 fieldset > div:last-child {
   margin-bottom: 5vh;
 }
@@ -146,18 +150,21 @@ input {
 div > input {
   box-sizing: border-box;
   width: 10vw;
-  height: 3vh;
+  height: 4vh;
   padding: 5px;
-}
-
-div > input:first-of-type {
-  margin-right: 50px;
+  padding-top: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
 }
 
 label {
   position: absolute;
+  font-size: .6rem;
   padding: 2.5px;
-  padding-left: 10px;
+  margin-left: 5px;
+  padding-left: 5px;
+  bottom: 2vh;
+  background-color:white;
   /* margin: 5vh 0 0 5vh; */
 }
 
@@ -183,4 +190,81 @@ input[type="submit"] {
   color: var(--login-clr);
 }
 
+/* CSS Validation */
 
+:focus {
+  outline: 0;
+}
+
+div > input::placeholder {
+  color: black;
+}
+
+div > input:hover {
+  background-color: #eee;
+}
+
+div > input:focus::placeholder {
+  color:transparent
+}
+
+div > input + span {
+  position: relative;
+}
+
+div > input + span::after {
+  position: absolute;
+}
+
+div > input:invalid + span::after {
+  content: "✖";
+  top: 1px;
+  padding-left: 5px;
+  color: red;
+}
+
+div > input:placeholder-shown + span::after {
+  content: " ";
+}
+
+div > input:valid + span::after {
+  content: "✓";
+  top: 1px;
+  padding-left: 5px;
+  color: green;
+}
+
+div > span:first-of-type {
+  margin-right: 50px;
+}
+
+div > span:last-child {
+  padding-left: 5px;
+}
+
+div > input:valid {
+  border-color: green;
+}
+
+div > label:has(+input:placeholder-shown) {
+  background-color: transparent;
+  color: transparent
+}
+
+div > label:has(+input:focus) {
+  background-color: white;
+  color: black
+}
+
+main > footer {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.main-footer > a:link,
+.main-footer > a:visited {
+  color: black;
+}
