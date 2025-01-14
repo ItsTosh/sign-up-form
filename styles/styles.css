@@ -180,6 +180,10 @@ input[type="submit"] {
   cursor: pointer;
 }
 
+input[type="submit"]:hover {
+  background-color: #506240;
+}
+
 .own-acc {
   margin: 2vh 0 2vh 5vh;
   font-weight: 600;
